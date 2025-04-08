@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BoxerCard from "./components/BoxerCard";
+import FighterForm from "./components/FighterForm";
+import MotivationQuote from "./components/MotivationQuote";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>🥊 Fight IQ: Fighter Stat Tracker</h1>
+
+      <section>
+        <h2>Featured Fighter</h2>
+        <div className="boxer-container">
+          <BoxerCard
+            name="Mike 'Iron' Tyson"
+            wins={50}
+            losses={7}
+            avatar="https://deadline.com/wp-content/uploads/2024/11/Mike-Tyson-Jake-Paul-Netflix-2185060193.jpg"
+            color="#f2f2f2"
+          />
+        </div>
+      </section>
+
+      <section>
+        <FighterForm />
+      </section>
+
+      <section>
+        <MotivationQuote />
+      </section>
     </div>
   );
 }
